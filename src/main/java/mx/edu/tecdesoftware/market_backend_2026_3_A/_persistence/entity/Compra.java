@@ -35,4 +35,6 @@ public class Compra {
     @Column(name = "estado")
     private String estado;
 
+    //Me falto el comit
+
 }

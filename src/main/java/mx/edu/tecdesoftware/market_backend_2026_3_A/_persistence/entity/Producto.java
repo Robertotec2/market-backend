@@ -34,4 +34,6 @@ public class Producto {
 
     @Column(name = "estado")
     private Boolean estado;
+
+    //me falto el comit
 }
