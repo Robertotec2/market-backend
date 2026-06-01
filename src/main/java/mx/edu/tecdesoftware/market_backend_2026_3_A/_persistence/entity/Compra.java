@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
+import java.util.List;
 
 @Entity
 @Table(name = "compras")
@@ -35,5 +36,13 @@ public class Compra {
     private String estado;
 
     //Me falto el comit
+
+    @ManyToOne
+    @JoinColumn( name = "id_cliente", insertable = false, updatable = false)
+    private Cliente cliente ;
+
+    //una compra tiene muchos productos
+    @OneToMany(mappedBy = "compra")
+    private List<CompraProducto> productos;
 
 }

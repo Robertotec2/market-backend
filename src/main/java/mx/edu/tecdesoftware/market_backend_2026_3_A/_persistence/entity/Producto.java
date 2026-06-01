@@ -36,4 +36,8 @@ public class Producto {
     private Boolean estado;
 
     //me falto el comit
+
+    @ManyToOne
+    @JoinColumn(name = "id_categoria", insertable = false, updatable = false)
+    private Categoria categoria;
 }

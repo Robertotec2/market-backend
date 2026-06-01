@@ -1,6 +1,7 @@
 package mx.edu.tecdesoftware.market_backend_2026_3_A._persistence.entity;
 
 import jakarta.persistence.*;
+import java.util.List;
 
 @Entity
 @Table
@@ -38,4 +39,7 @@ public class Categoria {
     public void setEstado(Boolean estado) {
         this.estado = estado;
     }
+
+    @OneToMany(mappedBy = "categoria")
+    private List<Producto> productos;
 }

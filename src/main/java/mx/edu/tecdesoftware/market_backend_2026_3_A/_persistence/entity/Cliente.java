@@ -1,6 +1,7 @@
 package mx.edu.tecdesoftware.market_backend_2026_3_A._persistence.entity;
 
 import jakarta.persistence.*;
+import java.util.List;
 
 @Entity
 @Table (name = "clientes")
@@ -40,7 +41,7 @@ public class Cliente {
         this.apellido = apellido;
     }
 
-    public Long getCelular() {
+    public Long getCellular() {
         return celular;
     }
 
@@ -63,4 +64,7 @@ public class Cliente {
     public void setCorreoelectronico(String correoelectronico) {
         this.correoelectronico = correoelectronico;
     }
+
+    @OneToMany(mappedBy = "cliente")
+    private  List<Compra> compras;
 }
