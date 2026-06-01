@@ -1,4 +1,3 @@
-
 package mx.edu.tecdesoftware.market_backend_2026_3_A._persistence.entity;
 
 import jakarta.persistence.*;
@@ -36,14 +35,5 @@ public class Compra {
     private String estado;
 
     //Me falto el comit
-
-    // Relacion con cliente, Muchas compras para un cliente
-    @ManyToOne
-    @JoinColumn( name = "id_cliente", insertable = false, updatable = false)
-    private Cliente cliente ;
-
-    //una compra tiene muchos productos
-    @OneToMany(mappedBy = "compra ")
-    private List<CompraProducto> productos;
 
 }

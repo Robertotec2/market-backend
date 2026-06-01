@@ -38,7 +38,4 @@ public class Categoria {
     public void setEstado(Boolean estado) {
         this.estado = estado;
     }
-
-    @OneToMany(mappedBy = "categoria ")
-    private List<Producto > productos;
 }
