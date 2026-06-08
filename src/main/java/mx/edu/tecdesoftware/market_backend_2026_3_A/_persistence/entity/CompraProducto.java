@@ -56,4 +56,20 @@ public class CompraProducto {
     @ManyToOne
     @JoinColumn( name = "id_producto",insertable = false, updatable = false)
     private Producto producto;
+
+    public Compra getCompra() {
+        return compra;
+    }
+
+    public void setCompra(Compra compra) {
+        this.compra = compra;
+    }
+
+    public Producto getProducto() {
+        return producto;
+    }
+
+    public void setProducto(Producto producto) {
+        this.producto = producto;
+    }
 }
