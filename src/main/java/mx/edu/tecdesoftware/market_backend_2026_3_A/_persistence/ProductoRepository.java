@@ -5,6 +5,7 @@ import mx.edu.tecdesoftware.market_backend_2026_3_A.Domain.repository.ProductRep
 import mx.edu.tecdesoftware.market_backend_2026_3_A._persistence.crud.ProductoCrudRepository;
 import mx.edu.tecdesoftware.market_backend_2026_3_A._persistence.entity.Producto;
 import mx.edu.tecdesoftware.market_backend_2026_3_A._persistence.mapper.ProductMapper;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -13,7 +14,9 @@ import java.util.Optional;
 @Repository
 public class ProductoRepository implements ProductRepository {
 
+    @Autowired
     private final ProductoCrudRepository productoCrudRepository;
+    @Autowired
     private final ProductMapper productMapper;
 
     // Constructor para la Inyección de Dependencias de Spring
